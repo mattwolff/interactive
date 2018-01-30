@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>New Header 123</title>
-  </head>
-  <body>
-    <h1>Matt Wolff</h1>
-    Hello world. What's up?
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Randomizer</title>
+    <meta name="description" content="">
+<!--    <link rel="stylesheet" href="assets/css/style.css">-->
+    <script src="assets/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <span>Participants:</span>   
+    <ul id="roster">
+        <li>Kyla Arsadjaja</li>
+        <li>Maria Candanoza</li>
+        <li>Evan Chang</li>
+        <li>Lauren Chun</li>
+        <li>Rosa Chung</li>
+        <li>Jake Brussel Faria</li>
+        <li>Taylor Hobbs</li>
+        <li>Jinu Hong</li>
+        <li>Zhiyan Huang</li>
+        <li>Daniel Lee</li>
+        <li>Danielle Lotridge</li>
+        <li>Kang Ma</li>
+        <li>Zack Robbins</li>
+        <li>José Rodríguez</li>
+        <li>Steven Rodriguez</li>
+        <li>Wenwen Zhang</li>
+    </ul>
+    
+    <br>
+    <button id="randomizer">Randomizer</button>
+    <h1 id="chosenOne"></h1>
+<script>
+$(document).ready(function(){ 
+// Randomizer
+    var participants = ["Kyla Arsadjaja", "Maria Candanoza", "Evan Chang", "Lauren Chun", "Rosa Chung", "Jake Brussel Faria", "Taylor Hobbs", "Jinu Hong", "Zhiyan Huang", "Daniel Lee", "Danielle Lotridge", "Kang Ma", "Zack Robbins", "José Rodríguez", "Steven Rodriguez", "Wenwen Zhang"];
+    
+    $("#randomizer").click(function(){
+        var chosenOne = Math.floor(Math.random() * participants.length);
+        console.log(participants.length + ": " + participants[chosenOne]);
+    // Maybe do something more exciting/suspenseful here... play an animation for 2-3 seconds?
+        
+        if (participants.length >= 1 ) {
+        // Display Chosen One in <h1>
+        // Wrap list-item in <del> element
+            $("#roster li:contains(" + participants[chosenOne] + ")").css("text-decoration", "line-through");
+            
+            $("#chosenOne").html(participants[chosenOne]);
+            participants.splice(chosenOne, 1);
+        }
+        else {
+            $("#chosenOne").html("That's Everyone");
+        }
+    });
+});
+</script>
+</body>
 </html>
