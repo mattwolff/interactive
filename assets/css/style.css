@@ -6,30 +6,36 @@ html {
 
 html,
 body {
-/*    margin: 0;*/
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
 }
 
 body {
-    color:#000;
-	font-family: "UniversLTStd", sans-serif;	
-	font-size: 13px;
-    line-height: 1.3;
-	background: white;
-    -webkit-font-smoothing: antialiased;
+  padding: 16px;
+  color:#000;
+  font-family: "UniversLTStd", sans-serif;
+  font-size: 13px;
+  line-height: 1.3;
+  background: white;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* 
+#randomizer {
+  position: fixed;
+  top: calc(200px - (10% + 2em));
+}
+
+/*
     Resets
     -------------------------------------- */
 
 ::-moz-selection {
 	color:white;
 	text-shadow:none;
-    background: black;
+  background: black;
 }
 
 ::selection {
@@ -98,7 +104,7 @@ iframe {
     display: none!important;
 }
 
-/* 
+/*
     Clearfix
     -------------------------------------- */
 
@@ -120,7 +126,7 @@ iframe {
     content:" ";
 }
 
-/* 
+/*
     Grid
     -------------------------------------- */
 
@@ -186,7 +192,7 @@ iframe {
   width: 100%;
 }
 
-/* 
+/*
     Grid-Offset
     -------------------------------------- */
 
@@ -222,24 +228,24 @@ iframe {
 }
 
 
-/* 
+/*
     Typography
     -------------------------------------- */
-
+/*
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 0;
     font-size: inherit;
-}
+} */
 
-a {
+/* a {
     color: black;
     text-decoration: none;
 }
 
 a.active {
     border-bottom: 1px solid black;
-}
+} */
 
 p   {
 /*
@@ -254,7 +260,7 @@ p   {
 }
 
 
-/* 
+/*
     Images
     -------------------------------------- */
 
@@ -267,18 +273,18 @@ img {
 }
 
 
-/*  
-    Mobile Menu  
+/*
+    Mobile Menu
     ______________________________________ */
 
 
 
-/*  
-    Media Queries   
+/*
+    Media Queries
     ______________________________________ */
 
 @media (min-width : 300px) and (max-width : 800px) {
     html {
         -webkit-text-size-adjust: none;
-     }    
+     }
 }
