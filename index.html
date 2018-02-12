@@ -8,9 +8,12 @@
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
 <body>
+    <ul>
 
-    <a href="boxify.html">Boxify</a>
-    <a href="randomizer.html">Randomizer</a>
+    </ul>
+    <li><a href="boxify.html">Boxify</a></li>
+    <li><a href="randomizer.html">Randomizer</a></li>
+
 
 <!-- This Loads jQuery -->
 <script src="assets/js/jquery-1.8.3.min.js"></script>
@@ -19,8 +22,8 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
-  var size = Math.floor(Math.random() * 12) + 1;
-  var units = "em";
+  var size = Math.floor(Math.random() * 72) + 12;
+  var units = "px";
   var fontSize = size + units;
 
   console.log(fontSize);
