@@ -37,28 +37,14 @@
 
 <!-- This is my Script -->
 <script type="text/javascript">
+
 $(document).ready(function(){
-  // Randomizer
-    // This variable is an array of Participants in the class
-    var participants = ["Kyla Arsadjaja", "Maria Candanoza", "Evan Chang", "Lauren Chun", "Rosa Chung", "Jake Brussel Faria", "Taylor Hobbs", "Jinu Hong", "Zhiyan Huang", "Daniel Lee", "Danielle Lotridge", "Kang Ma", "Zack Robbins", "José Rodríguez", "Steven Rodriguez", "Wenwen Zhang"];
-    // Click the Randomizer button
-    $("#randomizer").click(function(){
-        var chosenOne = Math.floor(Math.random() * participants.length);
-        // Maybe do something more exciting/suspenseful here... play an animation for 2-3 seconds?
-        if (participants.length >= 1 ) {
-            console.log(participants.length + ": " + participants[chosenOne]);
-            // Display the "Chosen One" inside an <h1> element
-            $("#chosenOne").html(participants[chosenOne]);
-            // Strikethrough the "Chosen One"
-            $("#roster li:contains(" + participants[chosenOne] + ")").css("text-decoration", "line-through");
-            // Splice removes our "Chosen One" from the list of Participants
-            participants.splice(chosenOne, 1);
-        }
-        // Once there's no more participants left
-        else {
-            $("#chosenOne").html("That's Everyone");
-        }
-    });
+  var size = Math.floor(Math.random() * 12) + 1;
+  var units = "em";
+  var fontSize = size + units;
+
+  console.log(fontSize);
+  $("body").css("font-size", fontSize);
 });
 </script>
 </body>
