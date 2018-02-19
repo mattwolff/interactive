@@ -16,17 +16,13 @@ body {
 body {
   padding: 16px;
   color:#000;
-  font-family: "UniversLTStd", sans-serif;
-  font-size: 13px;
+  font-family: sans-serif;
+  font-size: 16px;
   line-height: 1.3;
   background: white;
   -webkit-font-smoothing: antialiased;
 }
 
-#randomizer {
-  position: fixed;
-  top: calc(200px - (10% + 2em));
-}
 
 /*
     Resets
@@ -89,6 +85,7 @@ li {
 * {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+  font-weight: normal;
 /*    background-color: rgba(0,0,0,.05);*/
 }
 
@@ -231,24 +228,23 @@ iframe {
 /*
     Typography
     -------------------------------------- */
-/*
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin: 0;
     font-size: inherit;
-} */
+}
 
-/* a {
+a {
     color: black;
     text-decoration: none;
 }
 
 a.active {
     border-bottom: 1px solid black;
-} */
+}
 
 p   {
-/*
     margin-bottom: 1.2em;
     margin-top: 0;
     font-weight: normal;
@@ -256,7 +252,16 @@ p   {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-*/
+}
+
+
+header {
+  position: relative;
+  padding: 2em 0;
+}
+
+.content {
+  position: relative;
 }
 
 
@@ -272,10 +277,61 @@ img {
     float: left;
 }
 
-
 /*
-    Mobile Menu
+    Webring
     ______________________________________ */
+
+#webring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: #dbdbdb;
+  border-bottom: 1px solid #C1C4C8;
+}
+
+#webring a {
+  position: absolute;
+  height: 100%;
+  width: 33.333%;
+  border-radius: 0;
+}
+
+#webring a.previous {
+  cursor: w-resize;
+  /* background: pink; */
+  left: 0;
+}
+
+#webring a.next {
+  cursor: e-resize;
+  /* background: yellow; */
+  right: 0;
+}
+
+#webring a.home {
+  cursor: n-resize;
+  left: 33.333%;
+  border-left: 1px solid #C1C4C8;
+  border-right: 1px solid #C1C4C8;
+  /* background: url('http://spring2018-yale.veryinteractive.net/assets/images/favicon-16.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: constrain; */
+}
+
+#webring a.home:hover {
+  /* background: url('http://spring2018-yale.veryinteractive.net/assets/images/favicon-16.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: constrain; */
+}
+
+#webring a:hover {
+  background: transparent;
+  border-bottom: 0;
+}
 
 
 
