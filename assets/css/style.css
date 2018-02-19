@@ -254,6 +254,9 @@ p   {
     hyphens: none;
 }
 
+/*
+    Home Page
+    -------------------------------------- */
 
 header {
   position: relative;
@@ -262,6 +265,18 @@ header {
 
 .content {
   position: relative;
+}
+
+/*
+    Boxify
+    -------------------------------------- */
+
+.boxifier {
+  font-size: 24px;
+}
+
+#boxify {
+  border-bottom: 1px solid black;
 }
 
 
