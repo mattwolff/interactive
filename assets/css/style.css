@@ -276,7 +276,13 @@ header {
 }
 
 #boxify {
+  border: 1px solid transparent;
   border-bottom: 1px solid black;
+  transition: all 250ms ease-in-out;
+}
+
+#boxify:hover {
+  border: 1px solid black;
 }
 
 
