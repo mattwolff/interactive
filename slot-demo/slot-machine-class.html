@@ -18,20 +18,10 @@
   <script type="text/javascript">
 
   $(document).ready(function(){
-    // Define the colors
+    // Define the images
+    // Include the extension in the name in case we're combining jpg, png, gif, etc.
     var puppies = ["verycute.jpg","puppy.jpg","nice-dog.jpg","favorite.jpg","doggy.jpg","doggo.jpg","dog.jpg","cute-dog.jpg","cool-dogs.jpg"];
 
-
-    // console.log(puppies);
-    // console.log("place in array: " + place);
-    // console.log(puppies[place]);
-    // This logs the position in the array
-    // puppies[0]
-    // puppies[1]
-    // puppies[2]
-    // puppies[3]
-    // puppies[4]
-    // puppies[5]... etc.
 
 
 
@@ -42,6 +32,17 @@
       var place_one = Math.floor(Math.random() * puppies.length);
       var place_two = Math.floor(Math.random() * puppies.length);
       var place_three = Math.floor(Math.random() * puppies.length);
+
+      console.log(puppies);
+      console.log("place in array: " + place_one);
+      console.log(puppies[place_one]);
+      // This logs the position in the array
+      // puppies[0]
+      // puppies[1]
+      // puppies[2]
+      // puppies[3]
+      // puppies[4]
+      // puppies[5]... etc.
 
       $("#column-one").css( "background-image", "url(slot-images/" + puppies[place_one] + ")" );
       $("#column-two").css("background-image", "url(slot-images/" + puppies[place_two] + ")" );
