@@ -1,0 +1,29 @@
+body {
+  background: black;
+}
+
+div {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 33.333%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+#column-one {
+  left: 0;
+}
+#column-two {
+  left: 33.333%;
+}
+#column-three {
+  right: 0;
+}
+button {
+  position: fixed;
+  bottom: 75px;
+  left: 75px;
+}
