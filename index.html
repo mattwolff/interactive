@@ -37,6 +37,12 @@ $(document).ready(function(){
   var date = new Date();
   console.log(greeting + date);
 
+  function pageScroll() {
+    window.scrollBy(0,-1);
+    scrolldelay = setTimeout(pageScroll, 10);
+  }
+
+  pageScroll();
   // // Font Size Variables
   // var size = Math.floor(Math.random() * 72) + 12;
   // var units = "px";

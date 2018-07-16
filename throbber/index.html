@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Matt's Class Wesbite</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <h1>Text Throbber</h1>
+
+  <div id="throbber"></div>
+
+<!-- This Loads jQuery -->
+<script src="../assets/js/jquery-1.8.3.min.js"></script>
+
+<!-- This is my Script -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+  var throbs = ["/","|","\\","|"];
+  var i = 0;
+  setInterval(function(){
+    i++;
+    if (i >= throbs.length) {
+      i=0;
+    }
+    $("#throbber").html(":" + throbs[i]);
+  }, 100);
+
+
+});
+</script>
+</body>
+</html>
