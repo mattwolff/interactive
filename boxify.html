@@ -9,18 +9,20 @@
 
 </head>
 <body class="boxifier">
-    <h2>Drag <a id="boxify" href="javascript:(function(){document.head.appendChild(document.createElement('script')).src='https://mattwolff.github.io/interactive/assets/js/boxify.js';})();">BOXIFY</a> to your bookmarks bar.</h2>
-<!-- This Loads jQuery -->
-<script src="assets/js/jquery-1.8.3.min.js"></script>
+    <h2>Drag <a href="javascript:(function(){let all=document.querySelectorAll(`*`);for(let i=0;i<all.length;i+=1){let colors=[`red`,`blue`,`lime`,`pink`,`yellow`,`black`,`cyan`,`magenta`,`blueviolet`];let randomColor=Math.floor(Math.random()*colors.length);let chosenColor=colors[randomColor];all[i].style.border=`2px solid ${ chosenColor }`}})();">BOXIFY</a> to your bookmarks bar.</h2>
 
 <!-- This is my Script -->
 <script type="text/javascript">
-$(document).ready(function(){
-  var greeting = "Hello it's ";
+document.addEventListener("DOMContentLoaded", function(event) {
+  var greeting = "Hello it is now";
   var date = new Date();
 
-  console.log(greeting + date);
+  console.log(`${greeting} ${date}`);
+
+
+
 });
+
 </script>
 </body>
 </html>
